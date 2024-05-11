@@ -157,7 +157,8 @@ defmodule Geo.WKT.Decoder do
   end
 
   defp binary_to_number(binary) do
-    if String.contains?(binary, "."), do: String.to_float(binary), else: String.to_integer(binary)
+    delimited = Number.Delimit.number_to_delimited(binary, delimiter: "", precision: 2)
+    if String.contains?(delimited, "."), do: String.to_float(delimited), else: String.to_integer(delimited)
   end
 
   defp remove_outer_parenthesis(coordinates) do
