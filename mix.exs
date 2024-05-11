@@ -34,7 +34,8 @@ defmodule Geo.Mixfile do
       {:jason, "~> 1.4", optional: true},
       {:ex_doc, "~> 0.29", only: :dev, runtime: false},
       {:stream_data, "~> 0.5", only: :test, runtime: false},
-      {:benchee, "~> 1.1", only: :dev, runtime: false}
+      {:benchee, "~> 1.1", only: :dev, runtime: false},
+      {:number, "~> 1.0"}
     ]
   end
 
